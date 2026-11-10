@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanishk Sharma — Senior Engineering Manager</title>
+<meta name="description" content="Kanishk Sharma — Senior Engineering Manager. 9 years shipping products used by millions at Myntra, Tokopedia, Anar and Dataflow Group. Full-stack ownership, frontend & backend.">
+<meta property="og:title" content="Kanishk Sharma — Senior Engineering Manager">
+<meta property="og:description" content="I build teams & products that millions of people tap, swipe & love.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kanishksharma.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF8F1; --ink:#16131f; --body:#434a63; --muted:#737a94;
+    --accent:#FF5D47; --yellow:#FFE14D; --mint:#B5F0C8; --peach:#FFB84D;
+    --card-shadow:#e8e2d4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth; overflow-x:hidden}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--paper); color:var(--body); line-height:1.65; font-size:16px;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--yellow); color:var(--ink)}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif; color:var(--ink)}
+  a{color:var(--ink)}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+  .hand{font-family:'Caveat',cursive; font-weight:600}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50; background:rgba(251,248,241,.92); backdrop-filter:blur(8px);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-in{max-width:1080px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:24px}
+  .logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:var(--ink); text-decoration:none}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex; gap:26px; margin-left:auto}
+  .nav-links a{
+    font-weight:600; font-size:14px; text-decoration:none; color:var(--ink); position:relative;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-4px; height:3px;
+    background:var(--accent); transition:right .22s; border-radius:2px;
+  }
+  .nav-links a:hover::after{right:0}
+  .btn{
+    display:inline-block; background:var(--ink); color:var(--paper); padding:10px 20px;
+    border-radius:999px; font-weight:700; font-size:13.5px; text-decoration:none;
+    border:2px solid var(--ink); transition:transform .15s, background .15s, color .15s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent; color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink); color:var(--paper)}
+  @media(max-width:760px){ .nav-links{display:none} .nav-in{gap:12px} .nav .btn{margin-left:auto} }
+
+  /* ---------- hero ---------- */
+  .hero{padding:84px 0 48px}
+  .eyebrow{font-weight:700; letter-spacing:3px; font-size:13px; color:var(--accent); text-transform:uppercase}
+  .hero h1{
+    font-size:clamp(40px,7.2vw,78px); font-weight:700; line-height:1.06; letter-spacing:-2px; margin-top:18px;
+  }
+  .hl{padding:0 10px; border-radius:6px; box-decoration-break:clone; -webkit-box-decoration-break:clone}
+  .hl.y{background:var(--yellow)} .hl.m{background:var(--mint)}
+  .pitch{font-size:clamp(16px,2.2vw,19px); max-width:660px; margin-top:26px}
+  .pitch b{color:var(--ink)}
+
+  /* stickers */
+  .stickers{display:flex; flex-wrap:wrap; gap:20px; margin-top:48px}
+  .stick{
+    background:#fff; border:2px solid var(--ink); border-radius:14px; padding:18px 24px;
+    box-shadow:5px 5px 0 var(--ink); transition:transform .2s, box-shadow .2s;
+  }
+  .stick:hover{transform:rotate(0deg) translateY(-4px) !important; box-shadow:7px 9px 0 var(--ink)}
+  .stick .num{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; color:var(--ink); line-height:1.1}
+  .stick .lbl{font-size:13px; font-weight:600; margin-top:2px}
+  .stick.s1{transform:rotate(-2deg)}
+  .stick.s2{transform:rotate(1.5deg); box-shadow:5px 5px 0 var(--accent)}
+  .stick.s2:hover{box-shadow:7px 9px 0 var(--accent)}
+  .stick.s3{transform:rotate(-1deg); box-shadow:5px 5px 0 var(--peach)}
+  .stick.s3:hover{box-shadow:7px 9px 0 var(--peach)}
+  .stick.s4{transform:rotate(2deg); background:var(--ink); box-shadow:5px 5px 0 var(--mint)}
+  .stick.s4:hover{box-shadow:7px 9px 0 var(--mint)}
+  .stick.s4 .hand{font-size:26px; color:var(--paper)}
+
+  /* ---------- ribbon ---------- */
+  .ribbon{
+    background:var(--ink); transform:rotate(-1.4deg) scale(1.06); margin:52px -24px; padding:14px 0; overflow:hidden;
+  }
+  .ribbon-track{
+    display:flex; white-space:nowrap; width:max-content;
+    animation:marq 28s linear infinite;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; color:var(--paper); letter-spacing:2px;
+  }
+  @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){ .ribbon-track{animation:none} }
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0 8px; scroll-margin-top:84px}
+  .sec-h{font-size:clamp(30px,4.5vw,40px); letter-spacing:-1px}
+  .sec-sub{font-size:24px; color:var(--accent); margin:4px 0 32px}
+
+  /* journey */
+  .j-card{
+    display:flex; gap:20px; align-items:flex-start; background:#fff; border:2px solid var(--ink);
+    border-radius:16px; padding:22px 26px; box-shadow:4px 4px 0 var(--card-shadow); margin-bottom:14px;
+    transition:transform .18s, box-shadow .18s;
+  }
+  .j-card:hover{transform:translateX(4px); box-shadow:6px 6px 0 var(--card-shadow)}
+  .j-card.now{border-color:var(--ink); box-shadow:4px 4px 0 var(--yellow)}
+  .pill{
+    flex:none; background:var(--ink); color:#fff; font-weight:700; font-size:12.5px;
+    padding:6px 12px; border-radius:999px; margin-top:2px;
+  }
+  .pill.hot{background:var(--accent)}
+  .j-card h3{font-size:17px; font-weight:700}
+  .j-card .co{color:var(--accent)}
+  .j-card p{font-size:14.5px; margin-top:4px}
+  .badge{
+    font-weight:600; font-size:12.5px; padding:2px 9px; border-radius:999px; margin-left:6px;
+    background:var(--yellow); color:var(--ink); white-space:nowrap;
+  }
+  .badge.g{background:var(--mint)}
+  .j-note{font-size:14px; font-weight:600; color:var(--muted); padding:6px 4px 0}
+  .steps{margin-top:14px; display:flex; flex-direction:column; gap:7px; font-size:13.5px; font-weight:500}
+  .step{display:flex; align-items:center; gap:10px; color:var(--muted)}
+  .step b{color:var(--ink); font-weight:700}
+  .step .dot{width:9px; height:9px; border-radius:50%; background:var(--card-shadow); border:2px solid var(--ink); flex:none}
+  .step.cur{color:var(--body)}
+  .step.cur .dot{background:var(--accent)}
+  .step.cur b{background:var(--yellow); padding:1px 7px; border-radius:4px}
+  @media(max-width:620px){ .j-card{flex-direction:column; gap:10px} }
+
+  /* projects */
+  .p-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:22px}
+  .p-card{
+    border:2px solid var(--ink); border-radius:18px; padding:24px; background:#fff;
+    transition:transform .2s, box-shadow .2s; display:flex; flex-direction:column;
+  }
+  .p-card:hover{transform:rotate(0deg) translateY(-5px) !important; box-shadow:0 14px 28px -12px rgba(22,19,31,.3)}
+  .p-card h3{font-size:20px}
+  .p-card p{font-size:14px; margin:8px 0 14px; flex:1}
+  .p-card .links{font-weight:700; font-size:13.5px; display:flex; gap:14px; flex-wrap:wrap}
+  .p-card .links a{text-decoration:none}
+  .p-card .links a:hover{color:var(--accent)}
+  .p1{transform:rotate(-1deg); background:var(--yellow)}
+  .p2{transform:rotate(1deg)}
+  .p3{transform:rotate(-.6deg); background:var(--mint)}
+  .p4{transform:rotate(.8deg)}
+  .p5{transform:rotate(-1.2deg); background:#FFD9D2}
+
+  /* skills */
+  .sk-group{margin-bottom:22px}
+  .sk-group h3{font-size:16px; margin-bottom:12px}
+  .tags{display:flex; flex-wrap:wrap; gap:10px}
+  .tag{
+    border:2px solid var(--ink); background:#fff; color:var(--ink); font-weight:600; font-size:13.5px;
+    padding:7px 14px; border-radius:999px; transition:background .15s, transform .15s;
+  }
+  .tag:hover{background:var(--yellow); transform:rotate(-1.5deg)}
+
+  /* education */
+  .edu{display:flex; gap:18px; align-items:baseline; margin-bottom:16px; flex-wrap:wrap}
+  .edu .yr{font-weight:700; font-size:13px; color:var(--muted); min-width:92px}
+  .edu h3{font-size:16px}
+  .edu p{font-size:14px}
+
+  /* trophies */
+  .trophies{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:10px 28px; list-style:none}
+  .trophies li{padding:9px 0 9px 30px; position:relative; font-size:15px; border-bottom:2px dashed var(--card-shadow)}
+  .trophies li::before{content:"★"; position:absolute; left:2px; color:var(--accent)}
+  .trophies .hl-t{color:var(--ink); font-weight:600}
+
+  /* footer */
+  .foot{background:var(--ink); color:var(--paper); margin-top:72px; padding:72px 0 48px}
+  .foot .hand{font-size:28px; color:var(--yellow)}
+  .foot h2{font-size:clamp(40px,6vw,56px); letter-spacing:-1.5px; color:var(--paper); margin:8px 0 28px}
+  .foot-cta{display:flex; flex-wrap:wrap; gap:16px; align-items:center}
+  .btn.solid{background:var(--accent); border-color:var(--accent); color:#fff; font-size:15px; padding:14px 26px}
+  .btn.outline{background:transparent; border-color:var(--paper); color:var(--paper); font-size:15px; padding:12px 24px}
+  .btn.outline:hover{background:var(--paper); color:var(--ink)}
+  .foot-meta{margin-top:40px; display:flex; flex-wrap:wrap; gap:10px 26px; font-size:14px; color:#8f94ad}
+  .foot-meta a{color:#c9cde0; text-decoration:none; font-weight:600}
+  .foot-meta a:hover{color:var(--yellow)}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .55s ease, transform .55s ease}
+  .reveal.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none}
+    html{scroll-behavior:auto}
+    .stick,.p-card{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<div class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">kanishk<span>.</span></a>
+    <div class="nav-links">
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="mailto:kanishksharma3012@gmail.com">Hire me ↗</a>
+  </div>
+</div>
+
+<div class="wrap" id="top">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="eyebrow">Senior Engineering Manager · 9 years</div>
+    <h1>I build teams &amp; products that <span class="hl y">millions</span> of people tap, swipe &amp; <span class="hl m">love</span>.</h1>
+    <p class="pitch">Hi, I'm <b>Kanishk Sharma</b> — Senior Engineering Manager at <b>Dataflow Group</b>, owning a full-stack product area end to end: frontend, backend, architecture and the team behind it. Before this: checkout for 15M shoppers, discovery for 90M, and one startup of my own.</p>
+
+    <div class="stickers">
+      <div class="stick s1">
+        <div class="num">15M+</div>
+        <div class="lbl">monthly users · Myntra checkout</div>
+      </div>
+      <div class="stick s2">
+        <div class="num">90M+</div>
+        <div class="lbl">monthly users · Tokopedia Discover</div>
+      </div>
+      <div class="stick s3">
+        <div class="num">Team of 15</div>
+        <div class="lbl">full-stack ownership · Dataflow Group</div>
+      </div>
+      <div class="stick s4">
+        <div class="hand">scroll for the story ↓</div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- ================= RIBBON ================= -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>&nbsp;FULL-STACK OWNERSHIP ✦ REACT ✦ NEXT.JS ✦ BACKEND ✦ REACT NATIVE ✦ PEOPLE LEADERSHIP ✦ ARCHITECTURE ✦ AI-FIRST ✦&nbsp;</span>
+    <span>&nbsp;FULL-STACK OWNERSHIP ✦ REACT ✦ NEXT.JS ✦ BACKEND ✦ REACT NATIVE ✦ PEOPLE LEADERSHIP ✦ ARCHITECTURE ✦ AI-FIRST ✦&nbsp;</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= JOURNEY ================= -->
+  <section id="journey" class="reveal">
+    <h2 class="sec-h">The journey so far</h2>
+    <div class="sec-sub hand">7 companies, 2 countries' worth of users, 1 startup →</div>
+
+    <div class="j-card now">
+      <span class="pill hot">NOW</span>
+      <div>
+        <h3>Senior Engineering Manager · <span class="co">Dataflow Group</span><span class="badge">Oct 2023 →</span></h3>
+        <p>Own a full-stack product area — not a technology slice. Frontend, backend, architecture, processes and planning, plus 1:1s, feedback and product strategy for a team of 15 developers. Built the product from scratch on Next.js with a backend-for-frontend layer.</p>
+        <div class="steps">
+          <div class="step cur"><span class="dot"></span>Mar 2026 — promoted to <b>Senior Engineering Manager</b></div>
+          <div class="step"><span class="dot"></span>2024 — promoted to <b>Engineering Manager</b></div>
+          <div class="step"><span class="dot"></span>Oct 2023 — joined as <b>Lead Software Engineer</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2022–23</span>
+      <div>
+        <h3>Technical Lead · <span class="co">Anar</span><span class="badge g">1M+ users</span></h3>
+        <p>Leadership team member overseeing the entire frontend suite — web (React + Qwik) and mobile (React Native). Led 5–7 devs through planning, execution and releases; drove the company's AI-first development approach, pipelines and scaling.</p>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2020–22</span>
+      <div>
+        <h3>Senior Software Developer · <span class="co">Myntra</span><span class="badge">15M+ MAU</span></h3>
+        <p>Owned Checkout — cart &amp; payments, gift cards and Myntra Credit — across desktop, mobile web (PWA), Android and iOS. Code reviews across teams; performance and third-party-integration initiatives.</p>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2019–20</span>
+      <div>
+        <h3>Software Developer · <span class="co">Tokopedia</span><span class="badge g">90M+ MAU</span></h3>
+        <p>React developer on Discover — an engine for creating pages on the go, one of the most important and highest-traffic modules of Indonesia's largest marketplace.</p>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2019</span>
+      <div>
+        <h3>Co-Founder · <span class="co">CodeBoxGlobal</span></h3>
+        <p>Founded a startup delivering web and mobile applications for clients, built with React and React Native.</p>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2018–19</span>
+      <div>
+        <h3>Software Developer · <span class="co">3 Pillar Global</span><span class="badge">9 apps shipped</span></h3>
+        <p>React &amp; React Native developer. Helped Univision launch three local-market apps — the same codebase now powers 9 apps on the Play Store and App Store.</p>
+      </div>
+    </div>
+
+    <div class="j-card">
+      <span class="pill">2017–18</span>
+      <div>
+        <h3>Software Developer · <span class="co">Mindfire Solutions</span></h3>
+        <p>React Native developer across multiple projects, including backend work where needed.</p>
+      </div>
+    </div>
+
+    <div class="j-note">Earlier internships: Grubox · Edcams Technologies · RiteTag · FacilityDoor</div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="reveal">
+    <h2 class="sec-h">Things I shipped</h2>
+    <div class="sec-sub hand">live in production, used daily →</div>
+    <div class="p-grid">
+      <div class="p-card p1">
+        <h3>Anar</h3>
+        <p>B2B trade platform — the whole frontend: React Native app plus React &amp; Qwik web. Hands-on design and execution with managerial ownership.</p>
+        <div class="links">
+          <a href="https://anar.biz/" target="_blank" rel="noopener">Web ↗</a>
+          <a href="https://apps.apple.com/in/app/anar-business-app-b2b-trade/id6448177600" target="_blank" rel="noopener">iOS ↗</a>
+          <a href="https://play.google.com/store/apps/details?id=biz.anar" target="_blank" rel="noopener">Android ↗</a>
+        </div>
+      </div>
+      <div class="p-card p2">
+        <h3>Myntra Checkout</h3>
+        <p>Cart → address → payment → confirmation for 15M monthly shoppers, plus gift cards and Myntra Credit — every platform, including PWA.</p>
+        <div class="links">
+          <a href="https://myntra.com/checkout/cart" target="_blank" rel="noopener">Cart ↗</a>
+          <a href="https://myntra.com/giftcard" target="_blank" rel="noopener">Giftcard ↗</a>
+        </div>
+      </div>
+      <div class="p-card p3">
+        <h3>Tokopedia Discovery</h3>
+        <p>Category &amp; Discovery pages built on the go by a page engine — serving 90M monthly users on mobile and desktop.</p>
+        <div class="links">
+          <a href="https://tokopedia.com" target="_blank" rel="noopener">tokopedia.com ↗</a>
+        </div>
+      </div>
+      <div class="p-card p4">
+        <h3>Univision Local Apps</h3>
+        <p>Local-market news apps — 9 applications shipped to both stores from a single React Native codebase.</p>
+        <div class="links">
+          <a href="https://www.univision.com/" target="_blank" rel="noopener">univision.com ↗</a>
+        </div>
+      </div>
+      <div class="p-card p5">
+        <h3>Spott Ordering</h3>
+        <p>Ordering launcher with Malaysia &amp; Singapore variants for Coca-Cola, Heineken and Mondelez — services layers, cart and most screens.</p>
+        <div class="links">
+          <a href="https://itunes.apple.com/my/app/spottorder-retail-ordering/id1271673947" target="_blank" rel="noopener">iOS ↗</a>
+          <a href="https://play.google.com/store/apps/details?id=com.rdnsing.rtmmobile&hl=en_US" target="_blank" rel="noopener">Android ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="reveal">
+    <h2 class="sec-h">The toolkit</h2>
+    <div class="sec-sub hand">what I build with &amp; how I lead →</div>
+    <div class="sk-group">
+      <h3>Build</h3>
+      <div class="tags">
+        <span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Next.js</span>
+        <span class="tag">React Native</span><span class="tag">Qwik</span><span class="tag">Backend / BFF</span>
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">C</span>
+      </div>
+    </div>
+    <div class="sk-group">
+      <h3>Lead</h3>
+      <div class="tags">
+        <span class="tag">Full-stack ownership</span><span class="tag">People management</span>
+        <span class="tag">Architecture</span><span class="tag">Planning &amp; releases</span>
+        <span class="tag">Code review</span><span class="tag">Performance</span><span class="tag">AI-first workflows</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education" class="reveal">
+    <h2 class="sec-h">Education</h2>
+    <div class="sec-sub hand">where it all started →</div>
+    <div class="edu">
+      <span class="yr">2013–2017</span>
+      <div><h3>B.Tech, Information Technology</h3><p>JSS Academy of Technical Education · 75.00%</p></div>
+    </div>
+    <div class="edu">
+      <span class="yr">2013</span>
+      <div><h3>XII (Senior Secondary), Science — CBSE</h3><p>Dewan Public School · 91.40%</p></div>
+    </div>
+    <div class="edu">
+      <span class="yr">2011</span>
+      <div><h3>X (Secondary) — CBSE</h3><p>Dewan Public School · CGPA 10/10</p></div>
+    </div>
+  </section>
+
+  <!-- ================= TROPHIES ================= -->
+  <section id="achievements" class="reveal">
+    <h2 class="sec-h">Trophy shelf</h2>
+    <div class="sec-sub hand">bragging rights, collected over the years →</div>
+    <ul class="trophies">
+      <li>Facilitator at <span class="hl-t">Google Applied CS</span></li>
+      <li>Selected as a <span class="hl-t">Microsoft Student Partner</span></li>
+      <li>Finalist — <span class="hl-t">Paytm Build for India Hackathon</span></li>
+      <li><span class="hl-t">Code For India Hackathon</span> at Rashtrapati Bhavan</li>
+      <li>Finalist — <span class="hl-t">Rajasthan Government Hackathon</span></li>
+      <li>2nd — <span class="hl-t">IEEE kwiz 2.0</span>, JSS Academy</li>
+      <li>Codelabs at <span class="hl-t">Microsoft Mobile Innovation Labs</span></li>
+      <li>2nd — Biz-O-War Business Quiz, Zealicon</li>
+    </ul>
+  </section>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="hand">Got something fun to build?</div>
+    <h2>Let's talk.</h2>
+    <div class="foot-cta">
+      <a class="btn solid" href="mailto:kanishksharma3012@gmail.com">kanishksharma3012@gmail.com</a>
+      <a class="btn outline" href="/galaxy/">▶&nbsp; Play the galaxy version</a>
+    </div>
+    <div class="foot-meta">
+      <a href="tel:+918860488735">+91 88604 88735</a>
+      <a href="https://github.com/coderunnr" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/kanishk-sharma-79354410a" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/Kani3012" target="_blank" rel="noopener">X / Twitter</a>
+      <span>Designed &amp; built by Kanishk Sharma · GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const rev = new IntersectionObserver(entries => {
+    entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add('in'); rev.unobserve(en.target); } });
+  }, {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => rev.observe(el));
+</script>
+</body>
+</html>
